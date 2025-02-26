@@ -71,3 +71,12 @@ ramp-test --submissions my_submission
 
 ```
 
+## Brief explanation and results
+
+A stacking approach was implemented, combining the strengths of multiple models. The base models selected were the SVM with an RBF kernel, which effectively identified complex decision boundaries, and the Gradient Boosting model, which captured non-linear dependencies. A logistic regression model was used as the meta-learner, trained on the predictions of the base models to optimally combine their outputs. This ensemble approach improved predictive accuracy by leveraging the complementary strengths of both models.
+
+However, due to the large number of features, training times were excessively long, particularly for the SVM model, which is sensitive to high-dimensional data. To mitigate this, feature selection via SelectKBest was applied, reducing dimensionality while maintaining relevant information. The final model evaluation also included permutation importance analysis to determine the most influential predictors. This method assessed the impact of randomly permuting each feature on model performance, confirming that certain brain regions played a key role in classification.
+
+The final stacked model successfully integrated the best-performing algorithms, improving classification accuracy and robustness while addressing computational efficiency challenges.
+
+
