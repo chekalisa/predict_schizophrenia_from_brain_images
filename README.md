@@ -1,6 +1,6 @@
 # Predict schizophrenia using brain anatomy
 
-Predict schizophrenia from brain grey matter (GM). schizophrenia is associated with diffuse and complex pattern of brain atrophy. We will try to learn a predictor of the clinical status (patient with schizophrenia vs. healthy control) using GM measurements on the brain participants.
+We aim to predict schizophrenia based on brain grey matter (GM). Schizophrenia is linked to a widespread and intricate pattern of brain atrophy. Our objective is to develop a model that can distinguish between individuals with schizophrenia and healthy controls using GM measurements. This project was conducted as part of an exam assignment for Professor Edouard Duchesnay’s Machine Learning course in the MoSEF Data Science program at Paris 1 Panthéon-Sorbonne.
 
 ## Dataset
 
@@ -21,39 +21,6 @@ using [cat12](http://www.neuro.uni-jena.de/cat/) software which provides:
   referential. Masking the brain provide *flat* 331 695 input features (voxels)
   for each participant.
 
-By default `problem.get_[train|test]_data()` return the concatenation of 284 ROIs of
-Grey Matter (GM) features with 331 695 features (voxels) within a brain mask.
-Those two blocks are higly redundant.
-To select only on ROIs (`rois`) features do:
-
-```
-X[:, :284]
-```
-
-To select only on (`vbm`) (voxel with the brain) features do:
-
-```
-X[:, 284:]
-```
-
-### Target
-
-The target can be found in `[test|train]_participants.csv` files, selecting the
-`age` column for regression problem.
-
-## Evaluation metrics
-
-[sklearn metrics](https://scikit-learn.org/stable/modules/model_evaluation.html)
-
-The main Evaluation metrics is the Root-mean-square deviation
-[ROC-AUC](https://en.wikipedia.org/wiki/Receiver_operating_characteristic), the Area Under Curve of eceiver operating characteristic curve, or ROC curve
-
-## Links
-
-- [RAMP studio](https://ramp.studio/)
-- [RAMP-workflow’s documentation](https://paris-saclay-cds.github.io/ramp-docs/ramp-workflow/)
-- [RAMP-workflow’s github](https://github.com/paris-saclay-cds/ramp-workflow)
-- [RAMP Kits](https://github.com/ramp-kits)
 
 ## Installation
 
@@ -68,12 +35,6 @@ This starting kit requires Python and the following dependencies:
 * `jupyter`
 * `ramp-workflow`
 
-Therefore, we advise you to install [Anaconda
-distribution](https://www.anaconda.com/download/) which include almost all
-dependencies.
-
-Only `nilearn` and `ramp-workflow` are not included by default in the Anaconda
-distribution. They will be installed from the execution of the notebook.
 
 To run a submission and the notebook you will need the dependencies listed in requirements.txt.
 You can install the dependencies with the following command-line:
@@ -82,30 +43,7 @@ You can install the dependencies with the following command-line:
 pip install -U -r requirements.txt
 ```
 
-If you are using conda, we provide an environment.yml file for similar usage.
 
-```
-conda env create -f environment.yml
-```
-
-Then, you can activate the environment using:
-
-```
-conda activate brain_anatomy_schizophrenia
-```
-
-Install optional packages, e.g.: `spyder`
-
-```
-conda install spyder
-```
-
-
-And desactivate using
-
-```
-conda deactivate
-```
 
 ## Getting started
 
@@ -118,20 +56,12 @@ python download_data.py
 2. Execute the jupyter notebook, from the root directory using:
 
 ```
-jupyter notebook brain_anatomy_schizophrenia_starting_kit.ipynb
+jupyter notebook notebook_final.ipynb
 ```
 
-Tune your model using the starting_kit
 
 3. Submission (Run locally)
 
-The submissions need to be located in the `submissions` folder.
-For instance for `starting_kit`, it should be located in
-`submissions/submissions/starting_kit`.
-
-Copy everything required to build your estimator in a submission file:
-`submissions/submissions/starting_kit/estimator.py`.
-This file must contain a function `get_estimator()`.
 
 Run locally:
 
