@@ -86,4 +86,7 @@ Bagged scores
         valid  0.84  0.75
         test   0.84  0.76
 
-
+## Authors
+- [Alisa Chekalina](https://github.com/chekalisa)
+- [Lia Gasparin](https://github.com/LiaGasparin)
+- [Carmen Cristea](https://github.com/CarmenParis)
