@@ -79,4 +79,11 @@ However, due to the large number of features, training times were excessively lo
 
 The final stacked model successfully integrated the best-performing algorithms, improving classification accuracy and robustness while addressing computational efficiency challenges.
 
+----------------------------
+Bagged scores
+----------------------------
+        score   auc  bacc
+        valid  0.84  0.75
+        test   0.84  0.76
+
 
