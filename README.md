@@ -66,6 +66,8 @@ jupyter notebook notebook_final.ipynb
 Run locally:
 
 ```
-ramp-test --submission starting_kit
+ramp-test --submissions my_submission
+
+
 ```
 
